@@ -1,0 +1,6 @@
+{{input value=value
+  key-up=(action 'handleFilterEntry')
+  class="light"
+  placeholder="Filter By City"}}
+{{!-- "results" comes from the list-filter.js JavaScript "backing" this component --}}
+{{yield results}}

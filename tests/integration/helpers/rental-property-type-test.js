@@ -12,6 +12,6 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{rental-property-type inputValue}}`);
 
-  assert.equal(this.$().text().trim(), 'Standaloneq');
+  assert.equal(this.$().text().trim(), 'Standalone');
 });
 

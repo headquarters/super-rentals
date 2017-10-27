@@ -3,6 +3,15 @@
   <h2>Welcome!</h2>
   <p>We hope you find exactly what you're looking for in a place to stay.</p>
 </div>
-{{#each model as |rentalUnit|}}
+{{#list-filter 
+  filter=(action 'filterByCity')
+  as |rentals|}}
+  <ul class="results">
+    {{#each rentals as |rentalUnit|}}
+      <li>{{rental-listing rental=rentalUnit}}</li>
+    {{/each}}
+  </ul>
+{{/list-filter}}
+{{!-- {{#each model as |rentalUnit|}}
   {{rental-listing rental=rentalUnit}}
-{{/each}}
+{{/each}} --}}
